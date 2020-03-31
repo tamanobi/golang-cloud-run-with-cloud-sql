@@ -5,6 +5,6 @@ steps:
     args: [
       'run', 'deploy', '--image=gcr.io/$PROJECT_ID/helloworld',
       '--set-env-vars DB_USER=$_DB_USER,DB_PASS=$_DB_PASS,INSTANCE_CONNECTION_NAME=$_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME',
-      '--add-cloudsql-instances=$INSTANCE_NAME', '--platform=managed', 'helloworld'
+      '--add-cloudsql-instances=$_INSTANCE_NAME', '--platform=managed', 'helloworld'
     ]
 images: ['gcr.io/$PROJECT_ID/helloworld']
